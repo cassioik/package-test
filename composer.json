@@ -1,0 +1,41 @@
+{
+    "name": "cassioik/package-test",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@email.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/cassioik/package-test",
+    "keywords": ["Laravel", "PackageTest"],
+    "require": {
+        "illuminate/support": "~10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cassioik\\PackageTest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cassioik\\PackageTest\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cassioik\\PackageTest\\PackageTestServiceProvider"
+            ],
+            "aliases": {
+                "PackageTest": "Cassioik\\PackageTest\\Facades\\PackageTest"
+            }
+        }
+    }
+}
